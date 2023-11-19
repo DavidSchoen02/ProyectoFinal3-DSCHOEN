@@ -130,9 +130,8 @@ export default function Navbar() {
 
         <List sx={{ mb: "20px" }}>
 
-
-          {navLinks1.map(link => (
-            <DrawerLinks url={link.url} name={link.name} />
+        {navLinks1.map(link => (
+            <DrawerLinks url={link.url} name={link.name} key={link.name}/>
           ))}
 
         </List>
@@ -145,7 +144,7 @@ export default function Navbar() {
         <List>
 
           {navLinks2.map(link => (
-            <DrawerLinks url={link.url} name={link.name} />
+            <DrawerLinks url={link.url} name={link.name} key={link.name} />
           ))}
 
         </List>

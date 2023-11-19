@@ -33,6 +33,8 @@ function App() {
             <Route path='/cart' element={<Carrito />} />
             <Route path='/tracking' element={<Tracking />} />
             <Route path='/tracking/:id' element={<Tracking />} />
+            <Route path='*' element={<Error />} />
+
           </Routes>
         </ThemeProvider>
       </CartContext>
