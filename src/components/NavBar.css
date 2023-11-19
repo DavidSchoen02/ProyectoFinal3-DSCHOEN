@@ -1,0 +1,23 @@
+li {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+li:hover {
+    width: 100%;
+    background-color: #cdcdcd;
+}
+
+a {
+    font-family: 'Maven Pro', sans-serif;
+    color: black;
+}
+
+.active {
+    color:brown;
+}
+
+.categorias{
+  font-family: 'Oxygen', sans-serif; 
+}
