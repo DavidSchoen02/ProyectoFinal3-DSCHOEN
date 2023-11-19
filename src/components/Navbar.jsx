@@ -16,6 +16,8 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import CartWidget from './CartWidget';
 import { NavLink } from 'react-router-dom';
 import { Button, Grid } from '@mui/material';
+import { navLinks1, navLinks2 } from '../utilities/NavLinks';
+import DrawerLinks from './DrawerLinks';
 
 const drawerWidth = 200;
 
@@ -128,10 +130,10 @@ export default function Navbar() {
 
         <List sx={{ mb: "20px" }}>
 
-          <li><NavLink to='./category/Basses'>Bajos</NavLink></li>
-          <li><NavLink to='./category/Guitars'>Guitarras</NavLink></li>
-          <li><NavLink to='./category/Drums'>Baterías</NavLink></li>
-          <li><NavLink to='./category/Keyboards'>Teclados</NavLink></li>
+
+          {navLinks1.map(link => (
+            <DrawerLinks url={link.url} name={link.name} />
+          ))}
 
         </List>
 
@@ -142,16 +144,15 @@ export default function Navbar() {
 
         <List>
 
-          <li><NavLink to='./category/Mics'>Micrófonos</NavLink></li>
-          <li><NavLink to='./category/Consoles'>Consolas</NavLink></li>
-          <li><NavLink to='./category/Amplifiers'>Amplificadores</NavLink></li>
-          <li><NavLink to='./category/Pedals'>Pedales</NavLink></li>
+          {navLinks2.map(link => (
+            <DrawerLinks url={link.url} name={link.name} />
+          ))}
 
         </List>
 
 
-       <Grid container justifyContent="center">
-        <NavLink to='./tracking'><Button variant="contained" sx={{borderRadius:"100px"}} >Seguir Orden</Button></NavLink>
+        <Grid container justifyContent="center">
+          <NavLink to='./tracking'><Button variant="contained" sx={{ borderRadius: "100px" }} >Seguir Orden</Button></NavLink>
         </Grid>
 
       </Drawer>
